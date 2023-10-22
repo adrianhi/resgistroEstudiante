@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Tilt+Prism&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.login-box {
+  position: relative;
+  top: 50%;
+  left: 10%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 253, 253);
+  box-sizing: border-box;
+}
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #030303;
+  text-align: center;
+}
+.login-box .user-box {
+  position: relative;
+  width: 100%;
+}
+.login-box .user-box .input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #030303;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #000000;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03f453;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.input {
+  margin: 5px;
+  width: 300px;
+  border: none;
+  box-shadow: inset 5px black;
+}
+
+.button {
+  min-width: 150px;
+  min-height: 60px;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  color: #313133;
+  background: #10da75;
+  background: linear-gradient(
+    90deg,
+    rgb(15, 206, 63) 0%,
+    rgb(35, 173, 88) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 144, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+button::before {
+  content: "";
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00ff6a;
+  box-shadow: 0 0 60px rgba(36, 207, 122, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #21c277;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+.btn-accion {
+  margin-right: 10px;
+  border: none;
+  background: none;
+}
+#no-estudiantes-msg {
+  text-align: center;
+}
